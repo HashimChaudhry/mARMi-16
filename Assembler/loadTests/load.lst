@@ -1,0 +1,21 @@
+8400    ; MOV R0, 1024          ; Move 1024 into R0
+9400    ; MOV R1, 1024          ; Move 1024 into R1
+2211    ; SUB R2, R0, R1        ; Activate Z flag
+7000    ; BNE 0                 ; Branch Testing
+6002    ; BEQ 2
+3000    ; EOR R0, R0, R0
+4000    ; B 0
+2050    ; ADD R2, R1, R0        ; Compute R2 + R1, store 0800 into R2
+0888    ; MOV R1, R2            ; Move R2 into R1
+8000    ; MOV R0, 0             ; Clear R0
+1808    ; STR R1, R0, R0        ; Store 0800 at address 0
+9001    ; MOV R1, 1             ; Next address
+2040    ; ADD R0, R1, R0        ; Increment memory counter by 1 (1)
+a000    ; MOV R2, 0             ; Clear R2
+108a    ; LDR R1, R2, R2        ; Load data from address 0 back into R1
+c400    ; MOV R4, 1024          ; Move 1024 into R4
+2109    ; ADD R1, R4, R1        ; Should compute 0x0400 + 0x0800
+180a    ; STR R1, R0, R2        ; Store Result in address 1
+0600    ; HALT                  ; Halt
+
+

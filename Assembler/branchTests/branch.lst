@@ -1,0 +1,10 @@
+8400    ; MOV R0, 1024      ; Move 1024 into R0
+9400    ; MOV R1, 1024      ; Move 1024 into R1
+2211    ; SUB R2, R0, R1    ; Activate 0 Flag
+7ffc    ; BNE -4            ; If Z flag or branch doesn't work, this program will loop infinitely
+6002    ; BEQ 2             ; If equal skip the next two instructions; otherwise, will loop infinitely
+3000    ; EOR R0, R0, R0    ;  Clear R0 (Shouldn't run)
+4ff9    ; B -7              ; Loop infinitely (Shouldn't run)
+2050    ; ADD R2, R1, R0    ; Add R1 + R0, store in R2
+0888    ; MOV R1, R2        ; Move R2 to R1
+0600    ; HALT              ; End program

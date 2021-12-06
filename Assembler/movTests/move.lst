@@ -1,0 +1,13 @@
+0x800a  ; MOV R0, 10        ; Move 10 into R0
+0x900a  ; MOV R1, 10        ; Move 10 into R1
+0x2211  ; SUB R2, R0, R1    ; Compute 10 - 10, store result in R2
+0x0000  ; NOP               ; Test the NOP instruction (Zero flag shouldn't change)
+0x0A18  ; MOV R3, FLAGS     ; Move FLAGS into R3
+0x08D0  ; MOV R2, R3        ; Move data from R3 into R2
+0xF008  ; MOV R7, 8         ; Move 8 into R7 (testing program counter moves)
+0x0000  ; NOP               ; Test NOP again
+0x09E0  ; MOV R4, R7        ; Store PC value into R4
+0x0600  ; HALT              ; HALT
+
+
+

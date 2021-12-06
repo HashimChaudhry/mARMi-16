@@ -1,0 +1,15 @@
+0000    ; NOP                 ; Increment PC
+0000    ; NOP
+0000    ; NOP
+8004    ; MOV R0, 4           ; Setup Immediate values
+9004    ; MOV R1, 4
+2039    ; ADD R7, R0, R1      ; Move 8 into R7 (Update PC)
+0000    ; NOP                 ; Shouldn't Execute
+0000    ; NOP                 ; Shouldn't Execute
+09D0    ; MOV R2, R7          ; Move program counter value into R2
+9000    ; MOV R1, 0           ; Address to store PC
+1879    ; STR R7, R1, R1      ; Store R7 at address 0
+0600    ; HALT                ; End program
+
+
+

@@ -1,0 +1,22 @@
+800a    ; MOV R0, 10        ; Load 10 into R0
+9001    ; MOV R1, 1         ; Load 1 into R1
+3401    ; LSL R0, R0, R1    ; Shift R0 left once (R0 is now 20)
+3611    ; LSR R2, R0, R1    ; Shift R0 right once, store in R2 (R2 is 10)
+b064    ; MOV R3, 100       ; Move 100 into R3
+c014    ; MOV R4, 20        ; Move 20 into R4
+28ec    ; DIV R5, R3, R4    ; Compute 20/4, store in R5
+3000    ; EOR R0, R0, R0    ; Clear R0
+
+3200    ; NOT R0, R0        ; Not R0 (FFFF)
+9000    ; MOV R1, 0         ; Move 0 into R1
+3248    ; NOT R1, R1        ; Not R1
+2040    ; ADD R0, R1, R0    ; Generate a Carry by adding R0 + R1
+
+9001    ; MOV R1, 1         ; Move 1 into R1
+3c49    ; ROR R1, R1, R1    ; Rotate R1 once right (8000)
+9002    ; MOV R1, 2         ; Move 2 into R1
+3a01    ; ROL R0, R0, R1    ; Rotate R0 left twice
+0600    ; HALT              ; End
+
+
+

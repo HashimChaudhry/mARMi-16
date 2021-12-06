@@ -1,0 +1,7 @@
+8FFF    ; MOV R0, -1      ; Move -1 into R0
+9FFF    ; MOV R1, -1      ; Move -1 into R1
+2040    ; ADD R0, R1, R0  ; Add two values
+0A18    ; MOV R3, FLAGS   ; Move FLAGS to register R3
+0600    ; HALT            ; End program
+
+
